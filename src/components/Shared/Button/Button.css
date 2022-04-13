@@ -1,0 +1,18 @@
+.button {
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  width: 15em;
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+  border-radius: 1em;
+}
+
+.button--primary {
+  background-color: #ebfcfb;
+}
+
+.button--secondary {
+  background-color: #ef8354;
+}
