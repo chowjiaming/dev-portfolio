@@ -1,0 +1,15 @@
+.contact__container {
+  padding: 2em;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.contact__header {
+  margin-bottom: 1em;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}

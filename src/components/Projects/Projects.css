@@ -1,0 +1,17 @@
+.projects {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  padding: 2em;
+}
+
+@media (min-width: 45rem) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.projects__header {
+  text-align: center;
+}

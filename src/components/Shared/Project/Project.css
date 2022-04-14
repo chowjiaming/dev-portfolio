@@ -1,0 +1,11 @@
+.project__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 1em 0;
+}
+
+.project__screenshot {
+  width: 100%;
+  border-radius: 10px;
+}

@@ -1,10 +1,14 @@
+import { useContext } from "react";
+import ScrollContext from "../../helpers/context/scrollContext";
 import { skills } from "../../config/skills";
+import Skill from "../Shared/Skill/Skill";
 import aboutImage from "../../assets/images/about.png";
 import "./About.css";
 
 export default function About() {
+  const { aboutSection } = useContext(ScrollContext);
   return (
-    <section className="about">
+    <section className="about" ref={aboutSection}>
       <h1 className="about__header">About Me</h1>
       <div className="about__container">
         <div className="about__content">
@@ -24,7 +28,7 @@ export default function About() {
           <h1 className="skills__header">My Skills:</h1>
           <div className="skills__container">
             {skills.map((skill) => {
-              return <div className="skills__item">{skill}</div>;
+              return <Skill key={skill} skill={skill} />;
             })}
           </div>
         </div>

@@ -1,13 +1,17 @@
-import { useState, Fragment } from "react";
-import { navItems } from "../../config/navItems";
+import { useState, useContext, Fragment } from "react";
+import ScrollContext from "../../helpers/context/scrollContext";
+// import { navItems } from "../../config/navItems";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const { heroSection, aboutSection, projectSection, contactSection } =
+    useContext(ScrollContext);
   const [nav, setNav] = useState({ isScrolled: false, isMobileOpen: false });
 
-  const handleScrollToTop = () => {
+  const handleScrollTo = (ref) => {
+    setNav({ isScrolled: false, isMobileOpen: false });
     window.scrollTo({
-      top: 0,
+      top: ref.current.offsetTop - 40,
       behavior: "smooth",
     });
   };
@@ -30,15 +34,42 @@ export default function Navbar() {
           nav.isScrolled ? "navbar__desktop--scroll" : ""
         }`}
       >
-        <h1 className="navbar__logo" onClick={handleScrollToTop}>
+        <h1
+          className="navbar__logo"
+          onClick={() => handleScrollTo(heroSection)}
+        >
           JC
         </h1>
         <ul className="navbar__links">
-          {navItems.map((navItem) => (
+          <li
+            className="navbar__link"
+            onClick={() => handleScrollTo(heroSection)}
+          >
+            Home
+          </li>
+          <li
+            className="navbar__link"
+            onClick={() => handleScrollTo(aboutSection)}
+          >
+            About
+          </li>
+          <li
+            className="navbar__link"
+            onClick={() => handleScrollTo(projectSection)}
+          >
+            Projects
+          </li>
+          <li
+            className="navbar__link"
+            onClick={() => handleScrollTo(contactSection)}
+          >
+            Contact
+          </li>
+          {/* {navItems.map((navItem) => (
             <li key={navItem + "-desktop"} className="navbar__link">
               {navItem}
             </li>
-          ))}
+          ))} */}
         </ul>
         {nav.isMobileOpen ? (
           <p className="mobile__icon--close" onClick={handleToggleClick}>
@@ -56,7 +87,31 @@ export default function Navbar() {
         }`}
       >
         <ul className="navbar__links--mobile">
-          {navItems.map((navItem) => (
+          <li
+            className="navbar__link"
+            onClick={() => handleScrollTo(heroSection)}
+          >
+            Home
+          </li>
+          <li
+            className="navbar__link"
+            onClick={() => handleScrollTo(aboutSection)}
+          >
+            About
+          </li>
+          <li
+            className="navbar__link"
+            onClick={() => handleScrollTo(projectSection)}
+          >
+            Projects
+          </li>
+          <li
+            className="navbar__link"
+            onClick={() => handleScrollTo(contactSection)}
+          >
+            Contact
+          </li>
+          {/* {navItems.map((navItem) => (
             <li
               key={navItem + "-mobile"}
               className="navbar__link"
@@ -64,7 +119,7 @@ export default function Navbar() {
             >
               {navItem}
             </li>
-          ))}
+          ))} */}
         </ul>
       </nav>
     </Fragment>

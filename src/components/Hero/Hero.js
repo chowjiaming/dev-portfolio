@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import ScrollContext from "../../helpers/context/scrollContext";
 import githubLogo from "../../assets/icons/github.svg";
 import linkedinLogo from "../../assets/icons/linkedin.svg";
 import heroImage from "../../assets/images/hero.png";
@@ -5,8 +7,9 @@ import Button from "../Shared/Button/Button";
 import "./Hero.css";
 
 export default function Hero() {
+  const { heroSection } = useContext(ScrollContext);
   return (
-    <section className="hero">
+    <section className="hero" ref={heroSection}>
       <img
         className="hero__image"
         src={heroImage}
@@ -54,7 +57,7 @@ export default function Hero() {
           </a>
           <a
             className="hero__link"
-            href="https://www.linkedin.com/in/travis-price-328519220/"
+            href="https://www.linkedin.com/in/chowjiaming/"
             aria-label="Visit my LinkedIn"
           >
             <img

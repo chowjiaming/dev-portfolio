@@ -1,0 +1,11 @@
+.form__input {
+  padding: 1em;
+  border-radius: 10px;
+}
+.form__input::placeholder {
+  color: lightslategray;
+}
+
+.form__input--textbox {
+  height: 25vh;
+}

@@ -1,3 +1,4 @@
+import { ScrollProvider } from "./helpers/context/scrollContext";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./layout/Header/Header";
 import Main from "./layout/Main/Main";
@@ -7,10 +8,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Header />
-      <Main />
-      <Footer />
+      <ScrollProvider>
+        <Navbar />
+        <Header />
+        <Main />
+        <Footer />
+      </ScrollProvider>
     </div>
   );
 }

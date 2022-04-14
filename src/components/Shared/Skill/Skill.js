@@ -1,5 +1,7 @@
 import "./Skill.css";
 
-export default function Skill() {
-  return <article className="skill__container">Skill</article>;
+export default function Skill(props) {
+  const { skill } = props;
+
+  return <article className="skill__container">{skill}</article>;
 }
