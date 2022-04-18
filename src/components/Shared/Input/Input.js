@@ -1,16 +1,14 @@
+import { Error } from "../Error/Error";
 import "./Input.css";
 
-export default function Input(props) {
-  const { name, label, placeholder, type, value, onChange, variant } = props;
+export const Input = ({ ...props }) => {
   return (
-    <input
-      name={name}
-      label={label}
-      placeholder={placeholder}
-      type={type}
-      value={value}
-      onChange={onChange}
-      className={`form__input ${variant}`}
-    />
+    <div>
+      <label className="input__label">
+        <span className="input__name">{props.name}</span>
+        <input className="input__input" {...props} />
+      </label>
+      <Error>{props.error}</Error>
+    </div>
   );
-}
+};

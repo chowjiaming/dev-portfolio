@@ -1,13 +1,17 @@
 .projects {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  justify-content: center;
   padding: 2em;
 }
 
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2em;
+  justify-content: center;
+}
+
 @media (min-width: 45rem) {
-  .projects {
+  .projects__container {
     grid-template-columns: repeat(3, 1fr);
   }
 }

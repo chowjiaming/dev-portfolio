@@ -1,9 +1,11 @@
+import tipCalculatorScreenshot from "../assets/screenshots/tip-calculator-screenshot.png";
 import calculatorScreenshot from "../assets/screenshots/calculator-screenshot.png";
+import countriesScreenshot from "../assets/screenshots/countries-screenshot.png";
 
 export const projects = [
   {
     name: "Tip Calculator App",
-    screenshot: { calculatorScreenshot },
+    screenshot: { tipCalculatorScreenshot },
     shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     longDescription:
@@ -19,7 +21,7 @@ export const projects = [
   },
   {
     name: "Countries Info App",
-    screenshot: { calculatorScreenshot },
+    screenshot: { countriesScreenshot },
     shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     longDescription:

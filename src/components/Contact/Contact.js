@@ -1,61 +1,55 @@
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
-import Input from "../Shared/Input/Input";
+import { Form } from "../Form/Form";
+import { formValidation } from "../../helpers/formValidation";
+import contactIcon from "../../assets/icons/contact.svg";
 import "./Contact.css";
+
+const initialValues = { name: "", email: "", subject: "", message: "" };
 
 export default function Contact() {
   const { contactSection } = useContext(ScrollContext);
-  const [contactData, setContactData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+  const [formData, setFormData] = useState({
+    formValues: initialValues,
+    formErrors: {},
+    isSubmit: false,
   });
-  const handleInput = (event) => {
-    setContactData({ ...contactData, [event.target.name]: event.target.value });
+
+  useEffect(() => {
+    if (formData.isSubmit && Object.keys(formData.formErrors).length === 0) {
+      console.log("Send " + formData.formValues);
+      setFormData({ ...formData, formValues: initialValues, isSubmit: false });
+    }
+  }, [formData]);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      formValues: { [e.target.name]: e.target.value },
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormData({
+      ...formData,
+      formErrors: formValidation(formData.formValues),
+      isSubmit: true,
+    });
   };
 
   return (
-    <section className="contact__container" ref={contactSection}>
-      <h1 className="contact__header">Contact Me</h1>
-      <form className="contact__form">
-        <Input
-          name="name"
-          label="Name"
-          placeholder="Billy Bob"
-          type="text"
-          value={contactData.name}
-          onChange={handleInput}
-          variant="form__input--primary"
+    <section className="contact" ref={contactSection}>
+      <h1 className="contact__header">Say Hello</h1>
+      <div className="contact__container">
+        <img className="contact__image" src={contactIcon} alt="Contact Me" />
+        <Form
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          formErrors={formData.formErrors}
+          formValues={formData.formValues}
         />
-        <Input
-          name="email"
-          label="Email"
-          placeholder="billy@bob.com"
-          type="text"
-          value={contactData.email}
-          onChange={handleInput}
-          variant="form__input--primary"
-        />
-        <Input
-          name="subject"
-          label="Subject"
-          placeholder="Looking to Hire!"
-          type="text"
-          value={contactData.subject}
-          onChange={handleInput}
-          variant="form__input--primary"
-        />
-        <Input
-          name="subject"
-          label="Subject"
-          placeholder="We love your amazing work, we want to hire you!"
-          type="text"
-          value={contactData.message}
-          onChange={handleInput}
-          variant="form__input--textbox"
-        />
-      </form>
+      </div>
     </section>
   );
 }

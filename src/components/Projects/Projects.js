@@ -9,11 +9,13 @@ export default function Projects() {
   return (
     <section className="projects" ref={projectSection}>
       <h1 className="projects__header">Projects</h1>
-      {projects.map((project, i) => {
-        // not good to use i as key
-        // will fix later when unique projects are configured
-        return <Project key={i} project={project} />;
-      })}
+      <div className="projects__container">
+        {projects.map((project, i) => {
+          // not good to use i as key
+          // will fix later when unique projects are configured
+          return <Project key={i} project={project} />;
+        })}
+      </div>
     </section>
   );
 }
