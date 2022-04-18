@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
-import { skills } from "../../config/skills";
-import Skill from "../Shared/Skill/Skill";
+import Skills from "./Skills/Skills";
 import aboutImage from "../../assets/images/about.png";
 import "./About.css";
 
@@ -25,12 +24,7 @@ export default function About() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <h1 className="skills__header">My Skills:</h1>
-          <div className="skills__container">
-            {skills.map((skill) => {
-              return <Skill key={skill} skill={skill} />;
-            })}
-          </div>
+          <Skills />
         </div>
       </div>
     </section>

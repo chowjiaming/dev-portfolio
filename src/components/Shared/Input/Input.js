@@ -1,7 +1,7 @@
 import { Error } from "../Error/Error";
 import "./Input.css";
 
-export const Input = ({ ...props }) => {
+export default function Input({ ...props }) {
   return (
     <div>
       <label className="input__label">
@@ -11,4 +11,4 @@ export const Input = ({ ...props }) => {
       <Error>{props.error}</Error>
     </div>
   );
-};
+}

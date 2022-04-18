@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
-import { Form } from "../Form/Form";
+import Form from "./Form/Form";
 import { formValidation } from "../../helpers/formValidation";
 import contactIcon from "../../assets/icons/contact.svg";
 import "./Contact.css";

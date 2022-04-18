@@ -26,17 +26,6 @@
   text-align: center;
 }
 
-.skills__header {
-  text-align: center;
-}
-
-.skills__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  gap: 0.5em;
-}
-
 @media (min-width: 45rem) {
   .about__container {
     display: flex;
@@ -52,9 +41,5 @@
   .about__image {
     width: 25vw;
     margin: 0;
-  }
-
-  .skills__container {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
