@@ -3,6 +3,7 @@ import "./Button.css";
 export default function Button({
   children,
   onClick,
+  sectionRef,
   classnames,
   type = "button",
 }) {
@@ -11,7 +12,7 @@ export default function Button({
       className={`button ${classnames}`}
       type={type}
       aria-label={children}
-      onClick={onClick}
+      onClick={() => onClick(sectionRef)}
     >
       {children}
     </button>

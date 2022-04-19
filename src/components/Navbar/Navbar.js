@@ -1,26 +1,20 @@
-import { useState, useContext, Fragment } from "react";
+import { useContext, Fragment } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
 // import { navItems } from "../../config/navItems";
 import Hamburger from "./Hamburger/Hamburger";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const { heroSection, aboutSection, projectSection, contactSection } =
-    useContext(ScrollContext);
-  const [nav, setNav] = useState({ isScrolled: false, isMobileOpen: false });
-
-  const handleScrollTo = (ref) => {
-    setNav({ isScrolled: false, isMobileOpen: false });
-    window.scrollTo({
-      top: ref.current.offsetTop - 40,
-      behavior: "smooth",
-    });
-  };
-
-  const handleScroll = () => {
-    if (window.scrollY >= 200) setNav({ ...nav, isScrolled: true });
-    else setNav({ ...nav, isScrolled: false });
-  };
+  const {
+    nav,
+    setNav,
+    heroSection,
+    aboutSection,
+    projectSection,
+    contactSection,
+    handleScrollTo,
+    handleScroll,
+  } = useContext(ScrollContext);
 
   window.addEventListener("scroll", handleScroll);
 
