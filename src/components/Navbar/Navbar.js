@@ -8,7 +8,6 @@ import "./Navbar.css";
 export default function Navbar() {
   const {
     nav,
-    setNav,
     heroSection,
     aboutSection,
     projectSection,
@@ -18,10 +17,6 @@ export default function Navbar() {
   } = useContext(ScrollContext);
 
   window.addEventListener("scroll", handleScroll);
-
-  const handleToggleClick = () => {
-    setNav({ ...nav, isMobileOpen: !nav.isMobileOpen });
-  };
 
   const assignRef = (navItem) => {
     switch (navItem) {
@@ -63,7 +58,7 @@ export default function Navbar() {
             </NavItem>
           ))}
         </ul>
-        <Hamburger nav={nav} handleToggleClick={handleToggleClick} />
+        <Hamburger />
       </nav>
       <nav
         className={`mobile__navbar ${

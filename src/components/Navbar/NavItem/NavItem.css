@@ -1,15 +1,15 @@
 .navbar__link {
   cursor: pointer;
   width: 5em;
-  color: white;
+  color: var(--colour-font);
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
 .navbar__link--active {
-  border-bottom: 2px solid #ef8354;
+  border-bottom: 2px solid var(--colour-secondary);
 }
 .navbar__link:hover {
-  border-bottom: 2px solid #ef8354;
+  border-bottom: 2px solid var(--colour-secondary);
 }
 
 @media only screen and (max-width: 730px) {
@@ -22,7 +22,7 @@
   }
   .navbar__link:hover,
   .navbar__link--active {
-    color: #ef8354;
+    color: var(--colour-secondary);
     border: none;
   }
 }

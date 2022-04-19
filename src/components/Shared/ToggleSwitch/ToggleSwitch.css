@@ -1,0 +1,25 @@
+.toggleswitch {
+  width: 3em;
+  padding: 0.2em;
+  border-radius: 2em;
+  cursor: pointer;
+  background-color: var(--colour-secondary);
+  transition: all 0.3s;
+  position: fixed;
+  right: 1em; 
+  bottom: 1em;
+  z-index: 1000;
+}
+
+.toggleswitch__knob {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--colour-primary);
+  transition: all 0.3s;
+}
+
+.toggleswitch__knob--light {
+  margin-left: 100%;
+  transform: translateX(-100%);
+}

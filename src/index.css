@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Open+Sans:ital,wght@0,600;0,800;1,600;1,800&display=swap");
-
 :root {
   box-sizing: border-box;
 }
@@ -10,6 +8,22 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+[data-theme="dark"] {
+  --colour-primary: #264653;
+  --colour-secondary: #e9897e;
+  --colour-tertiary: #00f5d4;
+  --colour-error: #ff4500;
+  --colour-font: #fff;
+}
+
+[data-theme="light"] {
+  --colour-primary: #9bb7d4;
+  --colour-secondary: #0072b5;
+  --colour-tertiary: #d62828;
+  --colour-error: #ff4500;
+  --colour-font: #000;
 }
 
 body {

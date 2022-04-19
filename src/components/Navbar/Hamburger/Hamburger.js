@@ -1,7 +1,9 @@
+import { useContext } from "react";
+import ScrollContext from "../../../helpers/context/scrollContext";
 import "./Hamburger.css";
 
-export default function Hamburger({ ...props }) {
-  const { nav, handleToggleClick } = props;
+export default function Hamburger() {
+  const { nav, handleToggleClick } = useContext(ScrollContext);
 
   return (
     <div className="hamburger-lines" onClick={handleToggleClick}>

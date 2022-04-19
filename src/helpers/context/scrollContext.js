@@ -4,8 +4,12 @@ const ScrollContext = createContext();
 export const ScrollProvider = ({ children }) => {
   const [nav, setNav] = useState({ isScrolled: false, isMobileOpen: false });
 
+  const handleToggleClick = () => {
+    setNav({ ...nav, isMobileOpen: !nav.isMobileOpen });
+  };
+
   const handleScrollTo = (ref) => {
-    setNav({ isScrolled: false, isMobileOpen: false });
+    setNav({ ...nav, isMobileOpen: false });
     window.scrollTo({
       top: ref.current.offsetTop - 40,
       behavior: "smooth",
@@ -25,11 +29,11 @@ export const ScrollProvider = ({ children }) => {
     <ScrollContext.Provider
       value={{
         nav,
-        setNav,
         heroSection,
         aboutSection,
         projectSection,
         contactSection,
+        handleToggleClick,
         handleScrollTo,
         handleScroll,
       }}

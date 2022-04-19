@@ -23,7 +23,7 @@
 
 .hero__heading--alt,
 .hero__subheading--alt {
-  color: #ef8354;
+  color: var(--colour-secondary);
 }
 
 .hero__buttons,

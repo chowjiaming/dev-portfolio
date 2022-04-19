@@ -9,7 +9,7 @@
   z-index: 999;
 }
 .navbar__desktop--scroll {
-  background-color: #1e212b;
+  background-color: var(--colour-tertiary);
 }
 @keyframes load-navbar {
   from {
@@ -24,11 +24,11 @@
   cursor: pointer;
   width: 2em;
   margin-left: 1em;
-  color: whitesmoke;
+  color: var(--colour-font);
   font-size: 2em;
 }
 .navbar__logo:hover {
-  color: #ef8354;
+  color: var(--colour-secondary);
   animation: spin-logo 1s ease-in-out forwards infinite alternate;
 }
 @keyframes spin-logo {
@@ -70,7 +70,7 @@
     width: 100vw;
     height: 100vh;
     transform: translateX(-140%);
-    background-color: #1e212b;
+    background-color: var(--colour-tertiary);
     z-index: 998;
     animation: navbar-close 0.4s linear forwards;
   }

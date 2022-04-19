@@ -37,11 +37,11 @@
 }
 
 .project__icon {
-  color: white;
+  color: var(--colour-font);
 }
 
 .project__icon:hover {
-  color: #ef8354;
+  color: var(--colour-secondary);
 }
 
 .project__toggle {
@@ -50,7 +50,7 @@
 }
 
 .project__toggle:hover {
-  color: #ef8354;
+  color: var(--colour-secondary);
 }
 
 .project__description--long {
@@ -58,22 +58,22 @@
 }
 
 @keyframes slideDown {
-	0% {
-		transform: translateY(-100%);
-	}
-	50%{
-		transform: translateY(8%);
-	}
-	65%{
-		transform: translateY(-4%);
-	}
-	80%{
-		transform: translateY(4%);
-	}
-	95%{
-		transform: translateY(-2%);
-	}			
-	100% {
-		transform: translateY(0%);
-	}		
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  65% {
+    transform: translateY(-4%);
+  }
+  80% {
+    transform: translateY(4%);
+  }
+  95% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
