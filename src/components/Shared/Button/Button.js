@@ -1,10 +1,19 @@
 import "./Button.css";
 
-export default function Button(props) {
-  const { block, modifier, alt, text } = props;
+export default function Button({
+  children,
+  onClick,
+  classnames,
+  type = "button",
+}) {
   return (
-    <button className={`button ${block} ${modifier}`} alt={alt}>
-      {text}
+    <button
+      className={`button ${classnames}`}
+      type={type}
+      aria-label={children}
+      onClick={onClick}
+    >
+      {children}
     </button>
   );
 }

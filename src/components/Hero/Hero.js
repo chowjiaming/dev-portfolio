@@ -1,7 +1,5 @@
 import { useContext } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
-// import githubLogo from "../../assets/icons/github.svg";
-// import linkedinLogo from "../../assets/icons/linkedin.svg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import heroImage from "../../assets/images/hero.png";
 import Button from "../Shared/Button/Button";
@@ -29,18 +27,8 @@ export default function Hero() {
           DEVELOPER.
         </h2>
         <div className="hero__buttons">
-          <Button
-            block="hero__button"
-            modifier="button--primary"
-            alt="Contact Me Button"
-            text="Contact Me"
-          />
-          <Button
-            block="hero__button"
-            modifier="button--secondary"
-            alt="View Projects Button"
-            text="View Projects"
-          />
+          <Button classnames="button--primary">Contact Me</Button>
+          <Button classnames="button--secondary">View Projects</Button>
         </div>
 
         <div className="hero__icons">
