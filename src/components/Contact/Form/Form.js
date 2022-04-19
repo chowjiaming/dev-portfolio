@@ -35,7 +35,7 @@ export default function Form({ ...props }) {
         rows="8"
         error={props.formErrors.message}
       />
-      <Button classnames="button--secondary">
+      <Button classnames="button--secondary" type="submit">
         Send Message
       </Button>
     </form>

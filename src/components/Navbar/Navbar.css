@@ -48,20 +48,6 @@
   list-style: none;
 }
 
-.navbar__link {
-  cursor: pointer;
-  width: 5em;
-  color: white;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-.navbar__link--active {
-  border-bottom: 2px solid #ef8354;
-}
-.navbar__link:hover {
-  border-bottom: 2px solid #ef8354;
-}
-
 .mobile__navbar {
   display: none;
 }
@@ -90,19 +76,6 @@
   }
   .mobile__navbar--open {
     animation: navbar-open 0.4s linear forwards;
-  }
-
-  .navbar__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    padding: 1em;
-  }
-  .navbar__link:hover,
-  .navbar__link--active {
-    color: #ef8354;
-    border: none;
   }
 
   @keyframes navbar-open {

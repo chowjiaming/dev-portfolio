@@ -1,6 +1,7 @@
 import { useContext, Fragment } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
-// import { navItems } from "../../config/navItems";
+import { navItems } from "../../config/navItems";
+import NavItem from "./NavItem/NavItem";
 import Hamburger from "./Hamburger/Hamburger";
 import "./Navbar.css";
 
@@ -22,6 +23,21 @@ export default function Navbar() {
     setNav({ ...nav, isMobileOpen: !nav.isMobileOpen });
   };
 
+  const assignRef = (navItem) => {
+    switch (navItem) {
+      case "Home":
+        return heroSection;
+      case "About":
+        return aboutSection;
+      case "Projects":
+        return projectSection;
+      case "Contact":
+        return contactSection;
+      default:
+        return null;
+    }
+  };
+
   return (
     <Fragment>
       <nav
@@ -36,35 +52,16 @@ export default function Navbar() {
           JC
         </h1>
         <ul className="navbar__links">
-          <li
-            className="navbar__link"
-            onClick={() => handleScrollTo(heroSection)}
-          >
-            Home
-          </li>
-          <li
-            className="navbar__link"
-            onClick={() => handleScrollTo(aboutSection)}
-          >
-            About
-          </li>
-          <li
-            className="navbar__link"
-            onClick={() => handleScrollTo(projectSection)}
-          >
-            Projects
-          </li>
-          <li
-            className="navbar__link"
-            onClick={() => handleScrollTo(contactSection)}
-          >
-            Contact
-          </li>
-          {/* {navItems.map((navItem) => (
-            <li key={navItem + "-desktop"} className="navbar__link">
+          {navItems.map((navItem) => (
+            <NavItem
+              key={`desktop-${navItem}`}
+              classname="navbar__link"
+              onClick={handleScrollTo}
+              sectionRef={assignRef(navItem)}
+            >
               {navItem}
-            </li>
-          ))} */}
+            </NavItem>
+          ))}
         </ul>
         <Hamburger nav={nav} handleToggleClick={handleToggleClick} />
       </nav>
@@ -74,39 +71,16 @@ export default function Navbar() {
         }`}
       >
         <ul className="navbar__links--mobile">
-          <li
-            className="navbar__link"
-            onClick={() => handleScrollTo(heroSection)}
-          >
-            Home
-          </li>
-          <li
-            className="navbar__link"
-            onClick={() => handleScrollTo(aboutSection)}
-          >
-            About
-          </li>
-          <li
-            className="navbar__link"
-            onClick={() => handleScrollTo(projectSection)}
-          >
-            Projects
-          </li>
-          <li
-            className="navbar__link"
-            onClick={() => handleScrollTo(contactSection)}
-          >
-            Contact
-          </li>
-          {/* {navItems.map((navItem) => (
-            <li
-              key={navItem + "-mobile"}
-              className="navbar__link"
-              onClick={handleToggleClick}
+          {navItems.map((navItem) => (
+            <NavItem
+              key={`mobile-${navItem}`}
+              classname="navbar__link"
+              onClick={handleScrollTo}
+              sectionRef={assignRef(navItem)}
             >
               {navItem}
-            </li>
-          ))} */}
+            </NavItem>
+          ))}
         </ul>
       </nav>
     </Fragment>
