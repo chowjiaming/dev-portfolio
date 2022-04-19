@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
+import emailjs from "@emailjs/browser";
 import Form from "./Form/Form";
 import { formValidation } from "../../helpers/formValidation";
 import contactIcon from "../../assets/icons/contact.svg";
@@ -16,16 +17,34 @@ export default function Contact() {
   });
 
   useEffect(() => {
+    const sendEmail = async () => {
+      const sentEmail = await emailjs.send(
+        "service_e6ydg1j",
+        "template_9w73v35",
+        formData.formValues,
+        "3Yd3Qz4R_neBtJarz"
+      );
+      console.log(sentEmail);
+    };
     if (formData.isSubmit && Object.keys(formData.formErrors).length === 0) {
-      console.log("Send " + formData.formValues);
+      try {
+        sendEmail();
+      } catch (error) {
+        console.log(error);
+      }
       setFormData({ ...formData, formValues: initialValues, isSubmit: false });
     }
   }, [formData]);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      formValues: { [e.target.name]: e.target.value },
+    setFormData((prevState) => {
+      return {
+        ...prevState,
+        formValues: {
+          ...prevState.formValues,
+          [e.target.name]: e.target.value,
+        },
+      };
     });
   };
 

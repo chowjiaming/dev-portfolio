@@ -1,13 +1,11 @@
-import { Error } from "../Error/Error";
+import Error from "../Error/Error";
 import "./Input.css";
 
 export default function Input({ ...props }) {
   return (
-    <div>
-      <label className="input__label">
-        <span className="input__name">{props.name}</span>
-        <input className="input__input" {...props} />
-      </label>
+    <div className="input">
+      <label className="input__label">{props.name} </label>
+      <input className="input__input" {...props} />
       <Error>{props.error}</Error>
     </div>
   );

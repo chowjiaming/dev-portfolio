@@ -1,11 +1,19 @@
-.form__input {
-  padding: 1em;
-  border-radius: 10px;
-}
-.form__input::placeholder {
-  color: lightslategray;
+.input {
+  margin: 1.5em 0;
+  position: relative;
 }
 
-.form__input--textbox {
-  height: 25vh;
+.input__label {
+  position: absolute;
+  transform: translate(0, -100%);
+}
+
+.input__input {
+  padding: 1em;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.input__input::placeholder {
+  color: lightslategray;
 }

@@ -1,0 +1,19 @@
+.textarea {
+  margin: 1.5em 0;
+  position: relative;
+}
+
+.textarea__label {
+  position: absolute;
+  transform: translate(0, -100%);
+}
+
+.textarea__input {
+  padding: 1em;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.textarea__input::placeholder {
+  color: lightslategray;
+}

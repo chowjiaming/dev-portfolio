@@ -1,26 +1,12 @@
-import { Error } from "../Error/Error";
+import Error from "../Error/Error";
 import "./TextArea.css";
 
 export default function TextArea({ ...props }) {
   return (
-    <div>
-      <label className="textarea__label">
-        <span className="textarea__name">{props.name}</span>
-        <textarea className="textarea__input" {...props} />
-      </label>
+    <div className="textarea">
+      <label className="textarea__label">{props.name}</label>
+      <textarea className="textarea__input" {...props} />
       <Error>{props.error}</Error>
     </div>
   );
 }
-
-// export const TextArea = ({ ...props }) => {
-//   return (
-//     <div>
-//       <label className="textarea__label">
-//         <span className="textarea__name">{props.name}</span>
-//         <textarea className="textarea__input" {...props} />
-//       </label>
-//       <Error>{props.error}</Error>
-//     </div>
-//   );
-// };

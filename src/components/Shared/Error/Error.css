@@ -1,0 +1,7 @@
+.input__error {
+  font-size: 0.8em;
+  color: #ff4500;
+  position: absolute;
+  right: 0;
+  transform: translate(0, 0);
+}
