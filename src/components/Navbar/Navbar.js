@@ -1,6 +1,7 @@
 import { useState, useContext, Fragment } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
 // import { navItems } from "../../config/navItems";
+import Hamburger from "./Hamburger/Hamburger";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -71,15 +72,7 @@ export default function Navbar() {
             </li>
           ))} */}
         </ul>
-        {nav.isMobileOpen ? (
-          <p className="mobile__icon--close" onClick={handleToggleClick}>
-            Close
-          </p>
-        ) : (
-          <p className="mobile__icon--open" onClick={handleToggleClick}>
-            Open
-          </p>
-        )}
+        <Hamburger nav={nav} handleToggleClick={handleToggleClick} />
       </nav>
       <nav
         className={`mobile__navbar ${

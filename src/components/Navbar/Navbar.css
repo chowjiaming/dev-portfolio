@@ -62,8 +62,6 @@
   border-bottom: 2px solid #ef8354;
 }
 
-.mobile__icon--open,
-.mobile__icon--close,
 .mobile__navbar {
   display: none;
 }
@@ -75,32 +73,6 @@
 
   .navbar__logo {
     margin-left: 1em;
-  }
-
-  .mobile__icon--open {
-    display: block;
-    cursor: pointer;
-    color: white;
-    font-size: 1em;
-    margin-left: auto;
-    padding-right: 1em;
-    z-index: 999;
-  }
-  .mobile__icon--open:hover {
-    color: #ef8354;
-  }
-
-  .mobile__icon--close {
-    display: block;
-    cursor: pointer;
-    color: white;
-    font-size: 1em;
-    margin-left: auto;
-    padding-right: 1em;
-    z-index: 999;
-  }
-  .mobile__icon--close:hover {
-    color: #ef8354;
   }
 
   .mobile__navbar {

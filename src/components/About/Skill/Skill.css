@@ -1,0 +1,11 @@
+.skill {
+  text-align: center;
+}
+
+.skill__icon {
+  color: #ef8354;
+}
+
+.skill__name {
+  font-size: 1em;
+}
