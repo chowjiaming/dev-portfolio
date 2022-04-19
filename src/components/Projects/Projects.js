@@ -11,7 +11,17 @@ export default function Projects() {
       <h1 className="projects__header">Projects</h1>
       <div className="projects__container">
         {projects.map((project) => {
-          return <Project key={project.name} project={project} />;
+          return (
+            <Project
+              key={project.name}
+              name={project.name}
+              screenshot={project.screenshot}
+              github={project.github}
+              link={project.link}
+              shortDesc={project.shortDesc}
+              longDesc={project.longDesc}
+            />
+          );
         })}
       </div>
     </section>

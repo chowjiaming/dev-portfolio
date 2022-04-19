@@ -8,6 +8,10 @@
   transform: translate(0, -100%);
 }
 
+.textarea__label::first-letter {
+  text-transform: capitalize;
+}
+
 .textarea__input {
   padding: 1em;
   width: 100%;

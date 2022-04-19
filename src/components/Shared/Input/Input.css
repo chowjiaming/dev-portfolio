@@ -8,6 +8,10 @@
   transform: translate(0, -100%);
 }
 
+.input__label::first-letter {
+  text-transform: capitalize;
+}
+
 .input__input {
   padding: 1em;
   width: 100%;

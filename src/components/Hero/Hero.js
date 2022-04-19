@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import ScrollContext from "../../helpers/context/scrollContext";
-import githubLogo from "../../assets/icons/github.svg";
-import linkedinLogo from "../../assets/icons/linkedin.svg";
+// import githubLogo from "../../assets/icons/github.svg";
+// import linkedinLogo from "../../assets/icons/linkedin.svg";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import heroImage from "../../assets/images/hero.png";
 import Button from "../Shared/Button/Button";
 import "./Hero.css";
@@ -45,25 +46,25 @@ export default function Hero() {
         <div className="hero__icons">
           <a
             className="hero__link"
+            target="_blank"
+            rel="noreferrer"
             href="https://github.com/chowjiaming"
             aria-label="Visit my Github"
           >
-            <img
+            <FaGithub
               className="hero__icon hero__icon--github"
-              src={githubLogo}
-              alt="Github Logo"
               aria-hidden="true"
             />
           </a>
           <a
             className="hero__link"
+            target="_blank"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/chowjiaming/"
             aria-label="Visit my LinkedIn"
           >
-            <img
+            <FaLinkedinIn
               className="hero__icon hero__icon--linkedin"
-              src={linkedinLogo}
-              alt="LinkedIn Logo"
               aria-hidden="true"
             />
           </a>

@@ -6,12 +6,12 @@
 .projects__container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 2em;
   justify-content: center;
 }
 
 @media (min-width: 45rem) {
   .projects__container {
+    gap: 2em;
     grid-template-columns: repeat(3, 1fr);
   }
 }
