@@ -10,9 +10,11 @@
 }
 
 .button--primary {
-  background-color: var(--colour-tertiary);
+  background-color: var(--colour-quaternary);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .button--secondary {
   background-color: var(--colour-secondary);
+  transition: background-color 0.3s ease-in-out;
 }

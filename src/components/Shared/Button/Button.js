@@ -2,7 +2,7 @@ import "./Button.css";
 
 export default function Button({
   children,
-  onClick,
+  handleClick,
   sectionRef,
   classnames,
   type = "button",
@@ -12,7 +12,7 @@ export default function Button({
       className={`button ${classnames}`}
       type={type}
       aria-label={children}
-      onClick={() => onClick(sectionRef)}
+      onClick={() => handleClick(sectionRef)}
     >
       {children}
     </button>

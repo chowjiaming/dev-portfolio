@@ -6,8 +6,12 @@ import Button from "../Shared/Button/Button";
 import "./Hero.css";
 
 export default function Hero() {
-  const { handleScrollTo, heroSection, contactSection, projectSection } =
-    useContext(ScrollContext);
+  const {
+    handleScrollTo,
+    heroSection,
+    contactSection,
+    projectSection,
+  } = useContext(ScrollContext);
   return (
     <section className="hero" ref={heroSection}>
       <img
@@ -30,14 +34,14 @@ export default function Hero() {
         <div className="hero__buttons">
           <Button
             classnames="button--primary"
-            onClick={handleScrollTo}
+            handleClick={handleScrollTo}
             sectionRef={contactSection}
           >
             Contact Me
           </Button>
           <Button
             classnames="button--secondary"
-            onClick={handleScrollTo}
+            handleClick={handleScrollTo}
             sectionRef={projectSection}
           >
             View Projects

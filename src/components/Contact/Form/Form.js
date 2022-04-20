@@ -35,7 +35,13 @@ export default function Form({ ...props }) {
         rows="8"
         error={props.formErrors.message}
       />
-      <Button classnames="button--secondary" type="submit">
+      <Button
+        classnames="button--secondary"
+        handleClick={() => {
+          return null;
+        }}
+        type="submit"
+      >
         Send Message
       </Button>
     </form>

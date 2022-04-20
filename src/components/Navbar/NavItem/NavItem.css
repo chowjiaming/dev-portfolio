@@ -2,14 +2,14 @@
   cursor: pointer;
   width: 5em;
   color: var(--colour-font);
+  transition: color 0.3s;
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
-.navbar__link--active {
-  border-bottom: 2px solid var(--colour-secondary);
-}
+.navbar__link--active,
 .navbar__link:hover {
   border-bottom: 2px solid var(--colour-secondary);
+  transition: color 0.3s;
 }
 
 @media only screen and (max-width: 730px) {
@@ -23,6 +23,7 @@
   .navbar__link:hover,
   .navbar__link--active {
     color: var(--colour-secondary);
+    transition: color 0.3s;
     border: none;
   }
 }

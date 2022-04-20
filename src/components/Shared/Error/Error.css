@@ -1,6 +1,7 @@
 .input__error {
   font-size: 0.8em;
   color: var(--colour-error);
+  transition: color 0.3s ease-in-out;
   position: absolute;
   right: 0;
 }

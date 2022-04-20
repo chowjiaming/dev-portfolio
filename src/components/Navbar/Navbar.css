@@ -10,6 +10,7 @@
 }
 .navbar__desktop--scroll {
   background-color: var(--colour-tertiary);
+  transition: all 0.3s;
 }
 @keyframes load-navbar {
   from {
@@ -25,10 +26,12 @@
   width: 2em;
   margin-left: 1em;
   color: var(--colour-font);
+  transition: color 0.3s ease-in-out;
   font-size: 2em;
 }
 .navbar__logo:hover {
   color: var(--colour-secondary);
+  transition: color 0.3s ease-in-out;
   animation: spin-logo 1s ease-in-out forwards infinite alternate;
 }
 @keyframes spin-logo {
@@ -71,6 +74,7 @@
     height: 100vh;
     transform: translateX(-140%);
     background-color: var(--colour-tertiary);
+    transition: background-color 0.3s ease-in-out;
     z-index: 998;
     animation: navbar-close 0.4s linear forwards;
   }

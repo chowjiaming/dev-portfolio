@@ -38,10 +38,12 @@
 
 .project__icon {
   color: var(--colour-font);
+  transition: color 0.3s ease-in-out;
 }
 
 .project__icon:hover {
   color: var(--colour-secondary);
+  transition: color 0.3s ease-in-out;
 }
 
 .project__toggle {
@@ -51,10 +53,11 @@
 
 .project__toggle:hover {
   color: var(--colour-secondary);
+  transition: color 0.3s ease-in-out;
 }
 
 .project__description--long {
-  animation: slideDown 1000ms ease-in;
+  animation: slideDown 800ms ease-in;
 }
 
 @keyframes slideDown {

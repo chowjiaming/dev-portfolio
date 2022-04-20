@@ -4,9 +4,9 @@
   border-radius: 2em;
   cursor: pointer;
   background-color: var(--colour-secondary);
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   position: fixed;
-  right: 1em; 
+  right: 1em;
   bottom: 1em;
   z-index: 1000;
 }
@@ -16,7 +16,7 @@
   height: 1em;
   border-radius: 50%;
   background-color: var(--colour-primary);
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .toggleswitch__knob--light {
