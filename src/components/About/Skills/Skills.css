@@ -1,0 +1,18 @@
+.skills__header {
+  text-align: center;
+}
+
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+@media (min-width: 45rem) {
+  .skills__container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+  }
+}

@@ -1,0 +1,11 @@
+.App {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: var(--colour-font);
+  background-color: var(--colour-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}

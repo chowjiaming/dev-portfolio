@@ -1,0 +1,23 @@
+.input {
+  margin: 1.5em 0;
+  position: relative;
+}
+
+.input__label {
+  position: absolute;
+  transform: translate(0, -100%);
+}
+
+.input__label::first-letter {
+  text-transform: capitalize;
+}
+
+.input__input {
+  padding: 1em;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.input__input::placeholder {
+  color: lightslategray;
+}

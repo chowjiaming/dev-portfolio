@@ -1,0 +1,39 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+[data-theme="dark"] {
+  --colour-primary: #393e46;
+  --colour-secondary: #ffd369;
+  --colour-tertiary: #222831;
+  --colour-quaternary: #94DAFF;
+  --colour-error: #d36060;
+  --colour-font: #ffffed;
+}
+
+[data-theme="light"] {
+  --colour-primary: #f6ecf0;
+  --colour-secondary: #cd5d7d;
+  --colour-tertiary: #949cdf;
+  --colour-quaternary: #94b3fd;
+  --colour-error: #f87060;
+  --colour-font: #333745;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

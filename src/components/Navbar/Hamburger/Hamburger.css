@@ -1,0 +1,46 @@
+.hamburger-lines {
+  height: 1.5rem;
+  width: 2rem;
+  position: absolute;
+  top: 1.4em;
+  right: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 45rem) {
+  .hamburger-lines {
+    display: none;
+  }
+}
+
+.line {
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--colour-secondary);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+.line2 {
+  transition: transform 0.2s ease-in-out;
+}
+.line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.line1.open {
+  transform: rotate(45deg);
+}
+.line2.open {
+  transform: scaleY(0);
+}
+.line3.open {
+  transform: rotate(-45deg);
+}

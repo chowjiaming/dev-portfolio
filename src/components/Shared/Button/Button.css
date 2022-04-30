@@ -1,0 +1,25 @@
+.button {
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  width: 15em;
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+  border-radius: 1em;
+}
+
+.button:hover {
+  transition: box-shadow 0.4s ease-out;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
+.button--primary {
+  background-color: var(--colour-quaternary);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button--secondary {
+  background-color: var(--colour-secondary);
+  transition: background-color 0.3s ease-in-out;
+}
