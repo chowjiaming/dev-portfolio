@@ -1,0 +1,14 @@
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+
+.attribution > p {
+  text-align: center;
+}
+
+.attribution > p > a {
+  color: var(--primary);
+}
