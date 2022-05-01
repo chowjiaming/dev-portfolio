@@ -3,8 +3,8 @@ export const skills = [
   "CSS",
   "JavaScript",
   "React",
+  "TypeScript",
   "Jest",
-  "NodeJS",
   "ExpressJS",
   "MongoDB",
 ];
