@@ -1,5 +1,11 @@
-import { FaHtml5, FaCss3Alt, FaNodeJs, FaReact } from "react-icons/fa";
-import { SiJavascript, SiJest, SiExpress, SiMongodb } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiJest,
+  SiExpress,
+  SiMongodb,
+} from "react-icons/si";
 import "./Skill.css";
 
 export default function Skill({ ...props }) {
@@ -14,10 +20,10 @@ export default function Skill({ ...props }) {
         return <SiJavascript className="skill__icon" size={60} />;
       case "React":
         return <FaReact className="skill__icon" size={60} />;
+      case "TypeScript":
+        return <SiTypescript className="skill__icon" size={60} />;
       case "Jest":
         return <SiJest className="skill__icon" size={60} />;
-      case "NodeJS":
-        return <FaNodeJs className="skill__icon" size={60} />;
       case "ExpressJS":
         return <SiExpress className="skill__icon" size={60} />;
       case "MongoDB":

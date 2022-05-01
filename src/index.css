@@ -14,15 +14,9 @@
   --colour-primary: #393e46;
   --colour-secondary: #ffd369;
   --colour-tertiary: #222831;
-<<<<<<< HEAD
   --colour-quaternary: #94daff;
   --colour-error: #d36060;
   --colour-font: #d7dce2;
-=======
-  --colour-quaternary: #94DAFF;
-  --colour-error: #d36060;
-  --colour-font: #ffffed;
->>>>>>> 8456c4aff486f2a0b2830eda2f95a4ae6aeb1363
 }
 
 [data-theme="light"] {
