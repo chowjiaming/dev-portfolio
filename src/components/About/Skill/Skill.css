@@ -1,0 +1,12 @@
+.skill {
+  text-align: center;
+}
+
+.skill__icon {
+  color: var(--colour-secondary);
+  transition: color 0.3s ease-in-out;
+}
+
+.skill__name {
+  font-size: 1em;
+}
