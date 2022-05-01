@@ -1,6 +1,6 @@
-import Input from "../../Shared/Input/Input";
-import TextArea from "../../Shared/TextArea/TextArea";
-import Button from "../../Shared/Button/Button";
+import Input from "../../../Shared/Input/Input";
+import TextArea from "../../../Shared/TextArea/TextArea";
+import Button from "../../../Shared/Button/Button";
 
 export default function Form({ ...props }) {
   return (

@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import ScrollContext from "../../helpers/context/scrollContext";
+import ScrollContext from "../../../context/scrollContext";
 import Project from "./Project/Project";
-import { projects } from "../../config/projects";
+import { projects } from "../../../config/projects";
 import "./Projects.css";
 
 export default function Projects() {

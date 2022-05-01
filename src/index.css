@@ -14,9 +14,9 @@
   --colour-primary: #393e46;
   --colour-secondary: #ffd369;
   --colour-tertiary: #222831;
-  --colour-quaternary: #94DAFF;
+  --colour-quaternary: #94daff;
   --colour-error: #d36060;
-  --colour-font: #ffffed;
+  --colour-font: #d7dce2;
 }
 
 [data-theme="light"] {

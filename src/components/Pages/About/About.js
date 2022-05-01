@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import ScrollContext from "../../helpers/context/scrollContext";
+import ScrollContext from "../../../context/scrollContext";
 import Skills from "./Skills/Skills";
-import aboutImage from "../../assets/images/about.png";
+import aboutImage from "../../../assets/images/about.png";
 import "./About.css";
 
 export default function About() {

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ThemeProvider } from "./helpers/context/themeContext";
+import { ThemeProvider } from "./context/themeContext";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";

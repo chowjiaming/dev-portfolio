@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from "react";
-import ScrollContext from "../../helpers/context/scrollContext";
+import ScrollContext from "../../../context/scrollContext";
 import emailjs from "@emailjs/browser";
 import Form from "./Form/Form";
-import { formValidation } from "../../helpers/formValidation";
-import contactIcon from "../../assets/icons/contact.svg";
+import { formValidation } from "../../../helpers/formValidation";
+import contactIcon from "../../../assets/icons/contact.svg";
 import "./Contact.css";
 
 const initialValues = { name: "", email: "", subject: "", message: "" };

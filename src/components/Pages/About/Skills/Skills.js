@@ -1,5 +1,5 @@
 import Skill from "../Skill/Skill";
-import { skills } from "../../../config/skills";
+import { skills } from "../../../../config/skills";
 import "./Skills.css";
 
 export default function Skills() {

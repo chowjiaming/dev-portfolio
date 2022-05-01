@@ -1,5 +1,5 @@
-import About from "../../components/About/About";
-import Projects from "../../components/Projects/Projects";
+import About from "../../Pages/About/About";
+import Projects from "../../Pages/Projects/Projects";
 import "./Main.css";
 
 export default function Main() {

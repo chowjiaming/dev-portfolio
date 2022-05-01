@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import ThemeContext from "./helpers/context/themeContext";
-import { ScrollProvider } from "./helpers/context/scrollContext";
+import ThemeContext from "./context/themeContext";
+import { ScrollProvider } from "./context/scrollContext";
 import Navbar from "./components/Navbar/Navbar";
-import Header from "./layout/Header/Header";
-import Main from "./layout/Main/Main";
-import Footer from "./layout/Footer/Footer";
-import ToggleSwitch from "./components/Shared/ToggleSwitch/ToggleSwitch";
+import Header from "./components/layout/Header/Header";
+import Main from "./components/layout/Main/Main";
+import Footer from "./components/layout/Footer/Footer";
+import ToggleSwitch from "./components/ToggleSwitch/ToggleSwitch";
 import "./App.css";
 
 function App() {

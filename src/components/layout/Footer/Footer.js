@@ -1,4 +1,4 @@
-import Contact from "../../components/Contact/Contact";
+import Contact from "../../Pages/Contact/Contact";
 // import Attribution from "../../components/Attribution/Attribution";
 import "./Footer.css";
 

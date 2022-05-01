@@ -1,17 +1,15 @@
 import { useContext } from "react";
-import ScrollContext from "../../helpers/context/scrollContext";
+import ScrollContext from "../../../context/scrollContext";
+import ThemeContext from "../../../context/themeContext";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import heroImage from "../../assets/images/hero.png";
-import Button from "../Shared/Button/Button";
+import heroImage from "../../../assets/images/hero.png";
+import Button from "../../Shared/Button/Button";
 import "./Hero.css";
 
 export default function Hero() {
-  const {
-    handleScrollTo,
-    heroSection,
-    contactSection,
-    projectSection,
-  } = useContext(ScrollContext);
+  const { handleScrollTo, heroSection, contactSection, projectSection } =
+    useContext(ScrollContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <section className="hero" ref={heroSection}>
       <img
@@ -57,7 +55,9 @@ export default function Hero() {
             aria-label="Visit my Github"
           >
             <FaGithub
-              className="hero__icon hero__icon--github"
+              className={`hero__icon hero__icon--github ${
+                theme === "dark" ? "hero__icon--dark" : "hero__icon--light"
+              }`}
               aria-hidden="true"
             />
           </a>
@@ -69,7 +69,9 @@ export default function Hero() {
             aria-label="Visit my LinkedIn"
           >
             <FaLinkedinIn
-              className="hero__icon hero__icon--linkedin"
+              className={`hero__icon hero__icon--linkedin ${
+                theme === "dark" ? "hero__icon--dark" : "hero__icon--light"
+              }`}
               aria-hidden="true"
             />
           </a>

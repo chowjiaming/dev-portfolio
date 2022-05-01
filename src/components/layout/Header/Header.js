@@ -1,4 +1,4 @@
-import Hero from "../../components/Hero/Hero";
+import Hero from "../../Pages/Hero/Hero";
 import "./Header.css";
 
 export default function Header() {
