@@ -1,0 +1,41 @@
+.about__container {
+  padding: 2em;
+}
+
+.about__header {
+  text-align: center;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.about__image {
+  width: 60vw;
+  margin-bottom: 1em;
+}
+
+.about__paragraph {
+  text-align: center;
+}
+
+@media (min-width: 45rem) {
+  .about__container {
+    display: flex;
+    gap: 2em;
+    padding: 0 5em;
+    margin: 0;
+  }
+
+  .about__content {
+    justify-content: center;
+  }
+
+  .about__image {
+    width: 25vw;
+    margin: 0;
+  }
+}

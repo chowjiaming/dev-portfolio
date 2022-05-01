@@ -1,5 +1,5 @@
 import { useContext, Fragment } from "react";
-import ScrollContext from "../../helpers/context/scrollContext";
+import ScrollContext from "../../context/scrollContext";
 import { navItems } from "../../config/navItems";
 import NavItem from "./NavItem/NavItem";
 import Hamburger from "./Hamburger/Hamburger";

@@ -1,0 +1,11 @@
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+@media (min-width: 45rem) {
+  .contact__form {
+    width: 30vw;
+  }
+}

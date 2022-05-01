@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ScrollContext from "../../../helpers/context/scrollContext";
+import ScrollContext from "../../../context/scrollContext";
 import "./Hamburger.css";
 
 export default function Hamburger() {
