@@ -18,6 +18,11 @@
   margin-bottom: 1em;
 }
 
+.about__image:hover {
+  transform: translateY(2px);
+  transition: transform 300ms ease-in-out;
+}
+
 .about__paragraph {
   text-align: center;
 }

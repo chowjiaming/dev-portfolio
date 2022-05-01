@@ -7,6 +7,11 @@
   transition: color 0.3s ease-in-out;
 }
 
+.skill__icon:hover {
+  transform: translateY(2px);
+  transition: transform 300ms ease-in-out;
+}
+
 .skill__name {
   font-size: 1em;
 }

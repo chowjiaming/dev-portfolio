@@ -19,6 +19,20 @@
 .hero__image {
   margin-top: 2em;
   width: 60vw;
+  animation: load-in-left 500ms ease-in-out;
+}
+
+.hero__image:hover {
+  transform: translateY(2px);
+  transition: transform 300ms ease-in-out;
+}
+
+.hero__heading {
+  animation: load-in-right 500ms ease-in-out;
+}
+
+.hero__subheading {
+  animation: load-in-left 500ms ease-in-out;
 }
 
 .hero__heading--alt,
@@ -27,9 +41,17 @@
   transition: color 0.3s ease-in-out;
 }
 
+.hero__button {
+  animation: load-in-right 500ms ease-in-out;
+}
+
 .hero__buttons,
 .hero__icons {
   margin-top: 1em;
+}
+
+.hero__icons {
+  animation: load-in-left 500ms ease-in-out;
 }
 
 .hero__icon--dark {

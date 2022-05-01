@@ -31,14 +31,14 @@ export default function Hero() {
         </h2>
         <div className="hero__buttons">
           <Button
-            classnames="button--primary"
+            classnames="hero__button button--primary"
             handleClick={handleScrollTo}
             sectionRef={contactSection}
           >
             Contact Me
           </Button>
           <Button
-            classnames="button--secondary"
+            classnames="hero__button button--secondary"
             handleClick={handleScrollTo}
             sectionRef={projectSection}
           >
