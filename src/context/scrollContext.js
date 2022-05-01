@@ -11,7 +11,7 @@ export const ScrollProvider = ({ children }) => {
   const handleScrollTo = (ref) => {
     setNav({ ...nav, isMobileOpen: false });
     window.scrollTo({
-      top: ref.current.offsetTop - 40,
+      top: ref.current.offsetTop - 55,
       behavior: "smooth",
     });
   };

@@ -7,7 +7,7 @@
   transition: all 0.3s ease-in-out;
   position: fixed;
   right: 1em;
-  bottom: 1em;
+  bottom: 1.5em;
   z-index: 1000;
 }
 

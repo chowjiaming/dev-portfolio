@@ -1,9 +1,10 @@
-.about__container {
-  padding: 2em;
+.about {
+  background-color: var(--colour-tertiary);
+  padding: 1em 0;
 }
 
-.about__header {
-  text-align: center;
+.about__container {
+  padding: 2em;
 }
 
 .about__content {

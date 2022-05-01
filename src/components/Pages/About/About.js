@@ -8,7 +8,6 @@ export default function About() {
   const { aboutSection } = useContext(ScrollContext);
   return (
     <section className="about" ref={aboutSection}>
-      <h1 className="about__header">About Me</h1>
       <div className="about__container">
         <div className="about__content">
           <h2 className="about__subheader">Who is Joseph?</h2>
