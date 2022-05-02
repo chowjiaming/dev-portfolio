@@ -1,12 +1,18 @@
-import Contact from "../../Pages/Contact/Contact";
-import Attribution from "../../Attribution/Attribution";
 import "./Footer.css";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <Contact />
-      <Attribution />
+      <p className="footer__text">
+        Crafted with <span className="footer__emoji">♥</span> by{" "}
+        <a
+          className="footer__text footer__text--link"
+          href="https://github.com/chowjiaming"
+        >
+          Joseph Chow
+        </a>
+        .
+      </p>
     </footer>
   );
 }

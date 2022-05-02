@@ -55,7 +55,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 730px) {
+@media (max-width: 48rem) {
   .navbar__links {
     display: none;
   }

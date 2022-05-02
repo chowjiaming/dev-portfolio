@@ -1,3 +1,19 @@
-.footer {
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5em;
   background-color: var(--colour-tertiary);
+}
+
+footer > p {
+  text-align: center;
+}
+
+footer > p > span {
+  color: var(--colour-error);
+}
+
+footer > p > a {
+  color: var(--primary);
 }

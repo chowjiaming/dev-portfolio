@@ -1,6 +1,7 @@
 .contact {
   padding: 2em;
   text-align: center;
+  background-color: var(--colour-tertiary);
 }
 
 .contact__header {

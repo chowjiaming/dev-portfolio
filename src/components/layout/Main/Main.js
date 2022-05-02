@@ -1,5 +1,6 @@
 import About from "../../Pages/About/About";
 import Projects from "../../Pages/Projects/Projects";
+import Contact from "../../Pages/Contact/Contact";
 import "./Main.css";
 
 export default function Main() {
@@ -7,6 +8,7 @@ export default function Main() {
     <main className="main__container">
       <About />
       <Projects />
+      <Contact />
     </main>
   );
 }

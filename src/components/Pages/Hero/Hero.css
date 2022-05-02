@@ -8,18 +8,19 @@
   min-height: 100vh;
 }
 
+.hero__image {
+  grid-row: 2 /3;
+  width: 100%;
+  animation: load-in-left 500ms ease-in-out;
+}
+
 .hero__container {
+  grid-row: 3 / 4;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.hero__image {
-  margin-top: 2em;
-  width: 60vw;
-  animation: load-in-left 500ms ease-in-out;
 }
 
 .hero__image:hover {
@@ -78,14 +79,29 @@
   margin: 0 0.5em;
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 48rem) {
+  .hero__image {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 64rem) {
   .hero {
     flex-direction: row-reverse;
   }
   .hero__image {
+    padding: 2em;
     margin: 0;
     width: 50vw;
   }
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
   .hero__buttons {
     display: flex;
     gap: 1em;
