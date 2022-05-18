@@ -1,14 +1,13 @@
-import { useState, Fragment } from "react";
 import { FaGithub, FaEye } from "react-icons/fa";
 import "./Project.css";
 
 export default function Project({ ...props }) {
-  const { name, screenshot, github, link, shortDesc, longDesc } = props;
-  const [detailView, setDetailView] = useState(false);
+  const { name, screenshot, github, link, shortDesc } = props;
+  // const [detailView, setDetailView] = useState(false);
 
-  const handleDetailToggle = () => {
-    setDetailView(!detailView);
-  };
+  // const handleDetailToggle = () => {
+  //   setDetailView(!detailView);
+  // };
 
   return (
     <article className="project">
@@ -43,7 +42,7 @@ export default function Project({ ...props }) {
       <p className="project__description project__description--short">
         {shortDesc}
       </p>
-      {!detailView ? (
+      {/* {!detailView ? (
         <p
           className="project__toggle project__toggle--expand"
           onClick={handleDetailToggle}
@@ -62,7 +61,7 @@ export default function Project({ ...props }) {
             Read Less
           </p>
         </Fragment>
-      )}
+      )} */}
     </article>
   );
 }
